@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColdTech| Login</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="icon" href="img/modelo4-fantasma.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="link-help">
+        <a href="https://coldtech.freshdesk.com/support/tickets/new" target="_blank"><button><i class='bx bx-help-circle'></i> ajuda</button></a>
+    </div>
+    <!--Header-->
+    <header>
+        <nav>
+            <img class="logo" src="img/mmodelo4-fantasma.png"><a href="index.html"></a></img>
+            <div class="mobile-menu">
+                <!--Chamando o menu mobile-->
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!--encerrando o menu mobile-->
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projeto.html">Projeto</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="login.html" style="color: #287bff;">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="banner">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="main-login">
+            <div class="left-login">
+                <h1>Faça login<br>Entre para o nosso time</h1>
+                <img src="img/grafico.svg" class="left-login-imagem" alt="grafico animado">
+
+            </div>
+        <div class="right-login">
+
+            <div class="card-login">
+                <h1>Login</h1>
+                <div class="textfield">
+                   
+                    <label for="usuario">E-mail:</label>
+                    <input id="email_input" type="text" placeholder="Login">
+                </div>
+                <div class="textfield">
+                    <label for="usuario">Senha</label>
+                    <input id="senha_input" type="password" placeholder="******">
+                </div>
+                <button class="btn-login" onclick="entrar()">Entrar</button>
+               
+                <label class="endfield" for="txt">Não tem uma conta? <a class="idlogin" color="#287bff" href="cadastro.html">Cadastrar-se</a></label>
+               
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login">
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    
+
+        <footer>
+            <div class="main-footer">
+                <!--Rodapé do site || Conteudo-->
+                <div class="mensagem-footer">
+                    <h1>Nos envie um e-mail, faça seu orçamento, melhore seu produto e aumente seus lucros</h1>
+                    <div class="mensagem-footer-aa">
+                        <h4>Orçamentos somente por e-mails/whatsapp</h4>
+                    </div>
+                    
+                </div>
+                
+                <hr>
+    
+                <div class="center-footer">
+                    
+                    <!--Left-center-->
+    
+    
+    
+                    <div class="right-center">
+                        <div class="box-footer">
+                            <div class="filha-box">
+                                
+                        <div class="txt-field-footer">
+                            <label for="endereço-footer">Endereço:</label>
+                            <span class="text" name="endereco">Rua Hadock Lobo <br>São Paulo - sp</span>
+                        </div>
+                        <br>
+                        <div class="txt-field-footer">
+                            <label for="social-footer">social:</label>
+                            <span class="text"><A href="#">linkidin laalal</A></span>
+                        </div>
+                    </div><!-- filha box-->
+    
+                    <div class="neta-box">
+    
+                        <div class="txt-field-footer">
+                            <label for="text-footer" name="email">email:</label>
+                            <span class="txt-field-footer-email"><A href="#">ColdTech_oficial@protonmail.com</A></span>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="txt-field-footer">
+                            
+                            <label for="telefone-footer" name="telefone">telefone:</label>
+                            <span class="text">+55 11 99798-8584</span>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <!--right center-->
+    
+                </div>
+    
+                    <hr>
+    
+                    <div class="down-footer">
+    
+                        <label>₢Todos os direitos reservados. Desenvolvido por ColdTech</label>
+    
+                    </div>
+            </div>
+            <!--main-footer-->
+    
+    
+        </footer>
+</body>
+
+</html>
+
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "preencha todos os campos";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+
+
+
+
+
+</script>

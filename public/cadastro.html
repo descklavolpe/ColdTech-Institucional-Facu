@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ColdTech | Cadastro</title>
+
+
+    <script src="./js/funcoes.js"></script>
+
+
+    <link rel="icon" href="img/modelo4-fantasma.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/top.css">
+        <link rel="stylesheet" href="css/cadastro.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <div class="link-help">
+        <a href="https://coldtech.freshdesk.com/support/tickets/new" target="_blank"><button><i class='bx bx-help-circle'></i> ajuda</button></a>
+    </div>
+<header>
+        <nav>
+            <img class="logo" src="img/mmodelo4-fantasma.png"><a href="index.html"></a></img>
+            <div class="mobile-menu">
+                <!--Chamando o menu mobile-->
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!--encerrando o menu mobile-->
+
+
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projeto.html">Projeto</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="login.html" style="color: #287bff;">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Cadastrar-se<br>Entre para o nosso time</h1>
+            <img src="img/cadastro.svg" class="left-login-imagem" alt="grafico animado">
+
+        </div>
+    <div class="right-login">
+
+        <div class="card-login">
+            <h1>Cadastro</h1>
+            <div class="textfield">
+                <label for="usuario">Nome</label>
+                <input id="nome_input" type="text" placeholder="Seu nome">
+            </div>
+            <div class="textfield">
+                <label for="usuario">CNPJ</label>
+                <input id="CNPJ_input" type="text" placeholder="Seu CNPJ">
+            </div>
+            <div class="textfield">
+                <label for="usuario">telefone</label>
+                <input id="telefone_input" type="text" placeholder="Seu telefone">
+            </div>
+            <div class="textfield">
+                <label for="senha">E-mail</label>
+                <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+            </div>
+            <div class="textfield">
+                <label for="senha">Senha</label>
+                <input id="senha_input" type="password" placeholder="******">
+            </div>
+            <div class="textfield">
+                <label for="senha">Confirmar senha</label>
+                <input id="confirmacao_senha_input" type="password" placeholder="******">
+            </div>
+        
+            <button class="btn-login" onclick="cadastrar()">Cadastrar</button>
+            <label class="endfield" for="txt">Já tem uma conta? <a class="idlogin" href="login.html">Login</a></label>
+
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
+            </div>
+
+            <div id="div_erros_login">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<footer>
+    <div class="main-footer">
+        <!--Rodapé do site || Conteudo-->
+        <div class="mensagem-footer">
+            <h1>Nos envie um e-mail, faça seu orçamento, melhore seu produto e aumente seus lucros</h1>
+            <div class="mensagem-footer-aa">
+                <h4>Orçamentos somente por e-mails/whatsapp</h4>
+            </div>
+            
+        </div>
+        
+        <hr>
+
+        <div class="center-footer">
+            
+            <!--Left-center-->
+
+
+
+            <div class="right-center">
+                <div class="box-footer">
+                    <div class="filha-box">
+                        
+                <div class="txt-field-footer">
+                    <label for="endereço-footer">Endereço:</label>
+                    <span class="text" name="endereco">Rua Hadock Lobo <br>São Paulo - sp</span>
+                </div>
+                <br>
+                <div class="txt-field-footer">
+                    <label for="social-footer">social:</label>
+                    <span class="text"><A href="#">linkidin laalal</A></span>
+                </div>
+            </div><!-- filha box-->
+
+            <div class="neta-box">
+
+                <div class="txt-field-footer">
+                    <label for="text-footer" name="email">email:</label>
+                    <span class="txt-field-footer-email"><A href="#">ColdTech_oficial@protonmail.com</A></span>
+                </div>
+                <br>
+                <br>
+                <div class="txt-field-footer">
+                    
+                    <label for="telefone-footer" name="telefone">telefone:</label>
+                    <span class="text">+55 11 99798-8584</span>
+                </div>
+            </div>
+            </div>
+            </div>
+            <!--right center-->
+
+        </div>
+
+            <hr>
+
+            <div class="down-footer">
+
+                <label>₢Todos os direitos reservados. Desenvolvido por ColdTech</label>
+
+            </div>
+    </div>
+    <!--main-footer-->
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var cnpjVar = CNPJ_input.value;
+        var telefoneVar = telefone_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == ""||cnpjVar ==""||telefoneVar =="") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "preencha os campos de cadastro";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                cnpjServer: cnpjVar,
+                telefoneServer: telefoneVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+
+    
+
+</script>

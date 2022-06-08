@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/top.css" />
+    <title>ColdTech</title>
+    <script type="text/javascript" src="js/Calculadora.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"><!--chamando o local do whatszapp-->
+    <link rel="stylesheet" href="css/calculadora.css">
+	<link rel="icon" href="img/modelo4-fantasma.png">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body onload="configurarGrafico()">
+
+  
+    <div class="link-help">
+        <a href="https://coldtech.freshdesk.com/support/tickets/new" target="_blank"><button><i class='bx bx-help-circle'></i> ajuda</button></a>
+    </div>
+
+    <header>
+      <nav>
+        <img class="logo" src="img/mmodelo4-fantasma.png"><a href="index.html"></a></img>
+            <div class="mobile-menu"> <!--Chamando o menu mobile-->
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div> <!--encerrando o menu mobile-->
+
+
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Projeto.html">Projeto</a></li>
+          <li><a href="calculadora.html" style="color: #287bff;">Calculadora</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+   
+    <div class="corpo">
+        <div class="div_lados">
+            <div class="caculadora">
+
+               
+
+                <div class="div_respostas">
+                    
+                    <h2 class="nome">Orçe seus lucros</h2>
+                    
+                    <div class="textfield">
+
+                    <label for="usuario">peso</label>
+                    <input class="ipt" id="ipt_peso" placeholder="Entre com o peso da carga" type="number">
+                    </div>
+
+                    <div class="textfield">
+                    <label for="usuario">valor</label>
+                    <input class="ipt" id="ipt_valor" placeholder="Entre com o valor da carga" type="number">
+                    </div>
+                </div>
+
+                <div class="div_button">
+
+                    <button class="btn-login" onclick="calcular()">Calcular</button>
+
+                </div>
+            </div>
+
+            <div class="parte">
+
+                <div class="combosCaixa">
+
+
+                    <div class="filha_caixa">
+
+                        <div class="neta_caixa">
+                            <div class="combo1">
+                                <center><span id="texto1">Peso total em Kg:</span><br><br><br>
+                                <span id="mostrar1" style="color: rgb(24, 185, 24);"></span></center>
+                            </div>
+                            <div class="combo2">
+                                <center><span id="texto2"> Sua margem de lucro com nossos serviços é de:</span><br><br><br>
+                                <span id="mostrar2" style="color: rgb(25, 25, 175);"></span></center>
+                            </div>
+                        </div>
+
+
+                        <div class="neta2">
+                            <div class="combo3">
+                                <center><span id="texto3">Valor com o nossos serviços:</span><br><br><br>
+                                <span id="mostrar3" style="color: rgb(24, 185, 24);"></span></center>
+                            </div>
+
+                            <div class="combo4">
+                                <center><span id="texto4">Valor sem nossos serviços:</span><br><br><br>
+                                <span id="mostrar4" style="color: rgb(233, 30, 30);"></span></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grafico">
+                    <span style="width: 10px;">
+                        <canvas style=" width: 100%;height: 100%;" id="myChart1" ></canvas>
+                        <canvas style=" width: 100%;height: 100%;" id="myChart2" style="display: none;"></canvas>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    </span>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+  <footer>
+    <div class="main-footer">
+        <!--Rodapé do site || Conteudo-->
+        <div class="mensagem-footer">
+            <h1>Nos envie um e-mail, faça seu orçamento, melhore seu produto e aumente seus lucros</h1>
+            <div class="mensagem-footer-aa">
+                <h4>Orçamentos somente por e-mails/whatsapp</h4>
+            </div>
+            
+        </div>
+        
+        <hr>
+
+        <div class="center-footer">
+            
+
+
+
+            <div class="right-center">
+                <div class="box-footer">
+                    <div class="filha-box">
+                        
+                <div class="txt-field-footer">
+                    <label for="endereço-footer">Endereço:</label>
+                    <span class="text" name="endereco">Rua Hadock Lobo <br>São Paulo - sp</span>
+                </div>
+                <br>
+                <div class="txt-field-footer">
+                    <label for="social-footer">social:</label>
+                    <span class="text"><A href="#">linkidin laalal</A></span>
+                </div>
+            </div><!-- filha box-->
+
+            <div class="neta-box">
+
+                <div class="txt-field-footer">
+                    <label for="text-footer" name="email">email:</label>
+                    <span class="txt-field-footer-email"><A href="#">ColdTech_oficial@protonmail.com</A></span>
+                </div>
+                <br>
+                <br>
+                <div class="txt-field-footer">
+                    
+                    <label for="telefone-footer" name="telefone">telefone:</label>
+                    <span class="text">+55 11 99798-8584</span>
+                </div>
+            </div>
+            </div>
+            </div>
+            <!--right center-->
+
+        </div>
+
+            <hr>
+
+            <div class="down-footer">
+
+                <label>₢Todos os direitos reservados. Desenvolvido por ColdTech</label>
+
+            </div>
+    </div>
+    <!--main-footer-->
+
+
+</footer>
+    <script src="js/mobile-navbar.js"></script>
+  </body>
+</html>

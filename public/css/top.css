@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    transition:0.3s ;
+}
+a:hover{
+    opacity: 0.7;
+}
+.logo{
+    height: 6vw;
+    text-decoration: uppercase;
+    letter-spacing: 4px;
+}
+nav{/* mudança no tamnho cor da nav */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black1);    
+    height: 11vh;
+    box-shadow: 1px 1px 20px #888;
+}
+main{ /*imagem de no fundo do site*/
+    
+    background-size: cover;
+    height: 92vh; 
+    display: flex;
+}
+/*Mensagem na main*/
+.slogan{
+    margin: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+.mensagem{
+    line-height:1.2em;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    
+}
+
+/*Mensagem na main*/
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list Li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/* hearder */
+
+/* iniciando responsividade mobile */
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div { /* Temporizador do menu mobile */
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+@media (max-width:999px){
+    body{
+        overflow-x:hidden ;
+    }
+    .nav-list{ /*Inserindo tamanho e cor na parte do menu mobile do site */
+        position: absolute;
+        top: 11vh;
+        right: 0;
+        width: 30vw;
+        height: 90vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in; /* ease-in = chegada suave */
+    }/* Chamando */
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+.nav-list.active{ /* Classe que sera lançada para o java script */
+    transform: translateX(0);
+}
+@keyframes navLinkFade{ /* as letras vão surgir devagar por isso o nome fade */
+
+    from{
+opacity:0;
+transform: translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px); /* transação dos topicos em mobile chegando da direnta pra esquerda */
+    }
+}
+
+/*falando com o toggle do menu quando a classe mobile tiver ativa */
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px); /*antacionando a primeira barra do botão menu do mobile */
+}
+.mobile-menu.active .line2{ /* Deixando a transição da 2 barra invisivel quando selecionar ela */
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px); /*Rotacionando a terceira barra do botão menu do mobile */
+}
+
+
+
+
+
+/*footer---------------------------------*/
+
+footer{
+    align-items:flex-end;
+    margin: 0 15vw 0 15vw;
+    background: #121216;
+}
+
+.main-footer{
+    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #121216;
+    flex-direction: column;
+    
+}
+.mensagem-footer{
+    margin-top: 5vh;
+    height: 20vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    
+}
+.mensagem-footer > h1{
+    color: #fff ;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.mensagem-footer-aa > h4{
+    margin-top: 3vh;
+    color: #fff ;
+    font-weight: 100;
+    font-size: 18px;
+    
+}
+.center-footer{  
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    
+}
+.left-center{
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn > button{
+    width: 90%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    letter-spacing: 3px;/* letter-spacing do texto é usada para controlar o espaço em branco entre as letras. */
+    color: #514869;
+    background:var(--blue);
+    cursor: pointer;
+    
+}
+.btn > button:hover{
+    box-shadow: 0px 10px 40px -12px var(--blue);
+}
+
+
+.orcafield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px; /* espaçamento entre os itens e a propia borda*/
+}
+.left-center > label{
+    color: #f0ffffde;
+    font-size:35px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: -29px;
+    justify-content: center;
+    display: flex;
+}
+.orcafield > textarea {
+    width: 90%;
+    font-size: 12pt;
+    border-radius: 10px;
+    border: none;
+    height: 10vh;
+    padding: 15px;
+}
+
+.orcafield > input{
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    height: 5vh;
+    outline: none;
+    font-size: 12pt;
+    padding: 15px;
+}
+
+
+
+.right-center{
+    height: 15vh;
+    width: 55vw;
+    align-items: center;
+    
+    color: #fff ;
+    display: flex;    
+}
+.box-footer{
+    
+    width: 100%;
+    flex-direction: row; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around  ;
+    
+}
+.txt-field-footer{
+    flex-direction: column;
+    display: flex;
+
+}
+.txt-field-footer > span{
+    color: #888;
+}
+.filha-box{    
+    display: flex;
+    flex-direction: column;
+}
+.neta-box{
+    flex-direction: column;
+    
+}
+.txt-field-footer-email{
+    font-size:15px;
+    margin-right: 30px;
+}
+
+.down-footer{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 10vh;
+}
+
+.down-footer > label{
+    color: rgb(114, 114, 114);
+}
+.social-footer{
+    margin: 20px;
+}
+
+
+/*Hr*/
+
+.main-footer > hr {
+    width: 90vw;
+    margin: 50px;
+    border: none;
+    border-top: 2px solid var(--blue);
+}
+
+/* help desck*/
+.link-help{
+    position: fixed;
+    margin-left: 92%;
+    margin-top: 90vh;
+}
+.link-help button{
+    height: 40px;
+    width: 80px;
+    background-color: var(--blue    );
+    border: 0;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white ;
+    
+}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+body * {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+body{
+    background: #121216;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root
+{
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+.main-login{
+    width: 100%;
+    height: 140vh;
+    background: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/* definindo area dos itens de login */
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}/* comportando area esqueda dentro do main-login*/
+.left-login > h1{
+    font-size: 3vw;
+    color: var(--black1);
+    
+}/*/Estilizando o h1 da parte esqueda*/
+.left-login-imagem{
+    width: 25vw;
+}/* Definindo imagem do lado esquedo */
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/* definindo area da parte direita dos itens*/
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: var(--black1);
+    border-radius: 20px;
+    box-shadow: 0px -10px 40px var(--black1);
+}/*card do login estilizando e deixando com tamanho, cor e direção dos itens dentro.*/
+.card-login > h1{
+    color: var(--blue);
+    font-weight: 800;
+    margin: 0;
+}/*Estilizando o h1 do login, cor e a intensidade da fonte */
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px; /* espaçamento entre os itens e a propia borda*/
+}
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--white );
+    color: var(--black1);
+    font-size: 12pt;
+    
+    outline: none;
+    box-sizing: border-box;
+}/* Definindo cor,tamanho, borda, sombra, cor dentro da input */
+.textfield > label{
+    color: var(--grey);
+    margin-bottom: 10px;
+}/* Cor e margin to lavel*/
+.textfield > input::placeholder{
+    color: var(--black1);
+}/*Estilizando o placeholder das input*/
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    letter-spacing: 3px;/* letter-spacing do texto é usada para controlar o espaço em branco entre as letras. */
+    color: var(--white);
+    background:var(--blue) ;
+    cursor: pointer;
+    
+}/*estilzando o botão definindo cores, tamanho, borda, sombra e os espaços entre as letras*/
+.btn-login:hover{
+    box-shadow: 0px 10px 40px -12px var(--blue);
+}
+.endfield{
+    color: var(--white  );
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Configurando a parte mobile da parte de login */
+@media only screen and (max-width:999px) {
+    .card-login{
+        width: 85%;
+
+    }/*Definindo o tamnho da card login*/
+}
+@media only screen and (max-width: 700px){/* Definindo o tamnho quando é pra mudar quando a tela tiver com 999px*/
+    .main-login{
+        flex-direction: column;
+        height: 130vh;
+        
+    }
+    .left-login > h1{
+        display: none;
+        
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-imagem{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90;
+    }
+    .endfield{
+        
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}

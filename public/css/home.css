@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--white);
+}
+.cor-footer{
+    background-color: #121216;
+}
+:root
+{
+    --blue: #287bff;
+    --blue2: #1f5ab9;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    transition:0.3s ;
+}
+a:hover{
+    opacity: 0.7;
+}
+.logo{
+    height: 6vw;
+    text-decoration: uppercase;
+    letter-spacing: 4px;
+}
+nav{/* mudança no tamnho cor da nav */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: var(--black1);    
+    height: 11vh;
+    box-shadow: 0 0 1rem black;
+}
+main{ /*imagem de no fundo do site*/
+    
+    background-size: cover;
+    height: 92vh; 
+    display: flex;
+}
+/*Mensagem na main*/
+.slogan{
+    margin: 15vw;
+    display: flex;
+    flex-direction: column;
+}
+.mensagem{
+    line-height:1.2em;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    
+}
+
+/*Mensagem na main*/
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list Li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/* hearder */
+
+/* iniciando responsividade mobile */
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div { /* Temporizador do menu mobile */
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+@media (max-width:999px){
+    body{
+        overflow-x:hidden ;
+    }
+    .nav-list{ /*Inserindo tamanho e cor na parte do menu mobile do site */
+        position: absolute;
+        top: 11vh;
+        right: 0;
+        width: 30vw;
+        height: 90vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in; /* ease-in = chegada suave */
+    }/* Chamando */
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+.nav-list.active{ /* Classe que sera lançada para o java script */
+    transform: translateX(0);
+}
+@keyframes navLinkFade{ /* as letras vão surgir devagar por isso o nome fade */
+
+    from{
+opacity:0;
+transform: translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0px); /* transação dos topicos em mobile chegando da direnta pra esquerda */
+    }
+}
+
+/*falando com o toggle do menu quando a classe mobile tiver ativa */
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px); /*antacionando a primeira barra do botão menu do mobile */
+}
+.mobile-menu.active .line2{ /* Deixando a transição da 2 barra invisivel quando selecionar ela */
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px); /*Rotacionando a terceira barra do botão menu do mobile */
+}
+
+
+/* -----------------------------------------------------------------------------------------------*/
+
+.div-main{
+    height: auto;
+}
+.div-txt{
+    margin: 100px;
+    width: 50vw;
+    flex-direction: column;
+    display: flex;
+}
+.div-txt > label{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--white);
+    font-variant: small-caps;
+}
+.div-txt > a{
+    margin-top: 20px;
+    display: flex;
+    width: 480px;
+    font-variant: small-caps;
+}
+.div-logao{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.div-logao > img{
+    animation: reverse;
+    border-radius: 150px;
+    height: 250px;
+    box-shadow: 10px 10px 5px 10px var(--blue2);
+}
+.div-logao > label{
+    font-size: 70px;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: var(--white);
+}
+.logo-div{
+    background:  linear-gradient( #287bff 100px,  #1f5ab9 50vh);
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    box-shadow: 0px 10px 10px var(--black1) ;
+}
+
+.logo-div > img{
+    height: 70vh;
+}
+.introducao-div{
+
+    height: 68vh;
+    flex-direction: row;
+    display: flex;
+    background-color: var(--white);
+}
+.introducao-div1{
+    background-color: var(--white);
+    height: 45vh;
+    flex-direction: row;
+    display: flex;
+}
+.left-introducao{
+    width: 50vw;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.txtfile{
+    margin: 20px;
+    padding: 50px;
+}
+.txtfile > label{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--black2);
+}
+.txtfile > h3 {
+    font-size: 30px;
+}
+
+.right-introduco{
+    width: 50vw;
+    
+}
+.txtfile-right{
+    margin: 20px;
+    padding: 50px;
+}
+.txtfile-right > label{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/*PArte da index projeto */
+.div-servico{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+}
+.box-servico-left{
+    width: 50vw;
+    height: 100%;
+    background:  linear-gradient( #287bff 100px,  #1f5ab9 50vh);
+    justify-content: center;
+    display: flex;
+
+}
+.left{
+    margin: 80px;
+    
+}.left h3{
+    font-size: 30px;
+    
+}
+.left label{
+    margin-left: 23px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--grey)
+}
+.btns{
+    height: 100%;
+    
+}
+.btns button{
+    margin-top: 200px;
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    letter-spacing: 3px;/* letter-spacing do texto é usada para controlar o espaço em branco entre as letras. */
+    color: var(--white);
+    background:var(--black1);
+    cursor: pointer;
+    
+}
+
+
+.box-servico-right{
+    width: 50vw;
+    height: 100%;
+    background:  linear-gradient( #ffffff 100px,  #ebebeb 50vh);
+}
+.txts-box{
+    margin: 80px;
+}
+.txts-box label{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-servico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 18vw;
+    position: absolute;
+    margin-left: 41%;
+    background-color: var(--black1);
+    border: 10vh;
+    border-color: #222;
+    box-shadow: 0px 10px 10px var(--black1) ;
+
+}
+.text-servico1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 18vw;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: -30px;
+    background-color: var(--black1);
+    border: 10vh;
+    border-color: #222;
+    box-shadow: 0px 10px 10px var(--black1) ;
+
+}
+.text-servico2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 21vw;
+    position: absolute;
+    margin-left: 39%;
+    margin-top: -30px;
+    background-color: var(--black1);
+    border: 10vh;
+    border-color: #222;
+    box-shadow: 0px 10px 10px var(--black1) ;
+
+}
+.text-servico > label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--grey);
+}
+.text-servico1 > label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--grey);
+}
+.text-servico2 > label{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--grey);
+}
+.box-servico{
+    padding-top: 20vh;
+    margin: 20px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+.box-box{
+    width: 19vw;
+    height: 57vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 15px var(--black1) ;
+}
+.card-box{
+    
+    width: 100%;
+    display: flex;
+}
+.txt-grafico {
+    height: 100%;
+}
+.div-empresas{
+    height: 40vh;
+    display: flex;
+    align-items:  center;
+    background-color: var(--white);
+}
+.logos{
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.logos > img{
+    height: 13vh;
+}
+.div-calculadora{
+    height: 70vh;
+    width: 100%; 
+    background-color: var(--blue2);
+}
+.topico{
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.main-servico{
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+.left-servico{
+    height: 70vh;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.txtcal{
+    margin: 30px;   
+    width: 30vw;
+
+}
+.txtcal > label{
+    font-size: 20px;
+    font-weight: 500;
+}
+.right-servico{
+    width: 50vw;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.txt-right{
+    
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 600px;
+}
+
+.txt-right > label{
+    font-size: 30px;
+    font-weight: 500;
+}
+.txt-right1{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 400px;
+    
+    margin-top: 25px;
+}
+.txt-right1 > button{
+    width: 100%;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    letter-spacing: 3px;/* letter-spacing do texto é usada para controlar o espaço em branco entre as letras. */
+    color: #514869;
+    background:var(--black1);
+    cursor: pointer;
+    
+}
